@@ -1,0 +1,66 @@
+
+""" Git Commands For Reference """
+
+# Shortcuts
+shift + insert # Paste
+F5 # Autocomplete
+q # Exit from gitlog
+
+# Configure Name
+git config --global user.name "Lohith"
+
+# Configure Email id
+git config --global user.email "lohith_gn@yahoo.com"
+
+# Check configurations
+git config --list
+git config user.name
+git config user.email
+
+# Frequently used commands
+git status # check if the current directory is git directory
+git init # Initialize the current directory as git directory
+git rm first.txt # Remove the file and stage it as well,no need of add
+rm -rf .git # Remove git directory and delete all files inside it
+git mv first.txt first_rename.txt # Rename the file and stage it
+git rm --cached first.txt # Will stop tracking when it is present in .gitignore
+git add . # Track all files inside this folder
+git add first.txt
+
+git commit -m "Initial Commit" # First commit or snapshot
+git commit -a -m "Direct commit skipping staging area"
+git commit --amend
+
+git checkout --first.txt # Bring back to previous changes
+git checkout -f # Go back to previous commit and lose any information if you have modified and kept in staging area
+
+git log
+git log -2 # Give recent two commits,p for all commits
+git log --stat # Summary of any commits done recently
+git log --pretty=short
+git log --pretty=oneline
+git log --pretty=full
+git log --pretty=format:"%h --%an" # Go to git page and choose options for formating
+git log --since=2.days
+git log --since=2.months
+git log --since=2.years
+
+git clone https://github.com/tensorflow/tensorflow.git
+touch error.log # creates an error.log file
+git diff # Compares b/w staging area & working directory files
+git diff --staged # compares between previous commit & current staging area
+
+
+
+# How to ignore some files in git directory
+touch error.log
+touch .gitignore # create .gitignore file and type *.log if you want to ignore .log files
+# Can write dir/ if you want to ignore dir folder
+
+
+
+
+
+
+
+
