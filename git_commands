@@ -18,6 +18,9 @@ git config user.name
 git config user.email
 
 # Frequently used commands
+
+git config --global alias.st status # Instead of git status you can use git st, this is a shortcut
+
 git status # check if the current directory is git directory
 git init # Initialize the current directory as git directory
 git rm first.txt # Remove the file and stage it as well,no need of add
@@ -31,8 +34,20 @@ git commit -m "Initial Commit" # First commit or snapshot
 git commit -a -m "Direct commit skipping staging area"
 git commit --amend
 
+git restore --staged # Unstage
+
 git checkout --first.txt # Bring back to previous changes
 git checkout -f # Go back to previous commit and lose any information if you have modified and kept in staging area
+git checkout -b develop # Creates a new branch with name develop
+git checkout master # Move back to master branch
+git branch # Provides all the branches
+git branch -v # Provides all changes done in branches
+git branch --merged # Show all merged branches
+git branch --no-merged # Show all non merged branches
+git branch -d issue2 # Delete the branch which is merged
+git branch -D issue2 # Delete the branch even if it is not merged
+git merge develop # Will merge develop branch to master
+
 
 git log
 git log -2 # Give recent two commits,p for all commits
@@ -52,7 +67,7 @@ git diff --staged # compares between previous commit & current staging area
 
 git remote
 git remote -v # Provides fetch and push links
-
+git push origin master
 
 # How to ignore some files in git directory
 touch error.log
