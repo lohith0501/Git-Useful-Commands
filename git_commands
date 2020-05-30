@@ -50,6 +50,8 @@ touch error.log # creates an error.log file
 git diff # Compares b/w staging area & working directory files
 git diff --staged # compares between previous commit & current staging area
 
+git remote
+git remote -v # Provides fetch and push links
 
 
 # How to ignore some files in git directory
